@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="9775a9e3a04f48db5d3502abc533f5a7e0fa4ccfdb56158577818086bf5fc583.html">I As A Customer Need To Be Able To Register A New User</a></span>
+                > <span class="truncate-60"><a
+                    href="8619c0fde42fc51c747a36c9bf32da8a52dd123a147abca33ac82dbd2d458fc4.html">Validate that an error occurs when the entered user already exists in the database. </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-07-2022 02:36</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">I As A Customer Need To Be Able To Register A New User </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="3168ac98dced55ebee9b4705c217272483b983383ddddbf4fbda341f23b542c4.html">Existing User
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Validate that an error occurs when the entered user already exists in the database.
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given that the customer enters the shopping page<br>And he enters the option to create new account<br>When he enters the required information<br><table class='embedded'><tbody><tr><td>&lt;username&gt;</td><td>&lt;email&gt;</td><td>&lt;password&gt;</td><td>&lt;confirmPassword&gt;</td></tr></tbody></table><br>Then the customer can see the error message on screen User name already exists</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: no such element: Unable to locate element: {'method':'xpath','selector':'//label[contains (text (), 'User name already exists')]'}</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.advantageshopping.stepdefinitions.CreateAccountStepDefinitions.theCustomerCanSeeTheErrorMessageOnScreen(CreateAccountStepDefinitions.java:37)<br />✽.the customer can see the error message on screen User name already exists(file:///C:/Users/USER/Downloads/advantageonlineshopping/advantageonlineshopping/advantageonlineshopping/src/test/resources/features/create_account.feature:23)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="panel-body">
+                    <a href="pagesource14086392280265660875.html" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="4e2d00f5079668be54dc9ac4bc874eb747395d449a62275bcdaf8322c434c65a.png" title=" 1: Validate that an error occurs when the entered user already exists in the database. ({username=test16386, email=test16386@gmail.com, password=Prueba16386*, confirmPassword=Prueba16386*})" width="929"/>
+                <img src="4e2d00f5079668be54dc9ac4bc874eb747395d449a62275bcdaf8322c434c65a.png" title=" Given that the customer enters the shopping page" width="929"/>
+                <img src="4e2d00f5079668be54dc9ac4bc874eb747395d449a62275bcdaf8322c434c65a.png" title=" actor opens the browser at https://www.advantageonlineshopping.com/" width="929"/>
+                <img src="4e2d00f5079668be54dc9ac4bc874eb747395d449a62275bcdaf8322c434c65a.png" title=" Given that the customer enters the shopping page (completed)" width="929"/>
+                <img src="4e2d00f5079668be54dc9ac4bc874eb747395d449a62275bcdaf8322c434c65a.png" title=" And he enters the option to create new account" width="929"/>
+                <img src="4e2d00f5079668be54dc9ac4bc874eb747395d449a62275bcdaf8322c434c65a.png" title=" Actor create new account" width="929"/>
+                <img src="551fd09d9ec50ff76fa2d54781edc1aad036161c8c822b8656171512d4d7c086.png" title=" actor clicks on Icon to go to login" width="929"/>
+                <img src="a1c38c2982f53ff65940b26575cdb3dfc28f662568c8943ddcddbefba40fb0da.png" title=" actor clicks on Icon to go to login (completed)" width="929"/>
+                <img src="8d6c90fb9f1bc958e69a0c003ad6ac4f9922e1ad2a9f6c388cac4fcf762b49a5.png" title=" Actor wait" width="929"/>
+                <img src="0658c15220942d10e0a2e20cd4147895ca2460c62be3d0fa090de594ff69f56c.png" title=" Actor wait (completed)" width="929"/>
+                <img src="26824653026c93af638a300e111402e43f2f0d066315eebddd455d3bd505b537.png" title=" actor clicks on Icon to go to create new account" width="929"/>
+                <img src="9d5fa06ed915efbaa1846075f4d877b33cccdc50e0b809e8d9e21382d38f6125.png" title=" actor clicks on Icon to go to create new account (completed)" width="929"/>
+                <img src="d5a002e5892965834d32a65fdb712dd74534c07be2522e7e3cf5528536fe1f62.png" title=" Actor create new account (completed)" width="929"/>
+                <img src="d5a002e5892965834d32a65fdb712dd74534c07be2522e7e3cf5528536fe1f62.png" title=" And he enters the option to create new account (completed)" width="929"/>
+                <img src="d5a002e5892965834d32a65fdb712dd74534c07be2522e7e3cf5528536fe1f62.png" title=" When he enters the required information
+| test16386 | test16386@gmail.com | Prueba16386* | Prueba16386* |" width="929"/>
+                <img src="d5a002e5892965834d32a65fdb712dd74534c07be2522e7e3cf5528536fe1f62.png" title=" Actor create account" width="929"/>
+                <img src="d5a002e5892965834d32a65fdb712dd74534c07be2522e7e3cf5528536fe1f62.png" title=" actor enters 'test16386' into Field to enter user name to register" width="929"/>
+                <img src="62d9aa206d670cc63a7e44dde4d8aaf1a7ef901d70d3bf8f283f8d0f9d8103a5.png" title=" actor enters 'test16386' into Field to enter user name to register (completed)" width="929"/>
+                <img src="9644c1475e8161319158d4d70f451b2bfc1fc952a3ad435aa2e9ac3f3cb6083e.png" title=" actor enters 'test16386@gmail.com' into Field to enter email to register" width="929"/>
+                <img src="5e74e6a228c38e5444deabc208f73de1f8f67238f7fbc796812f21b4e8966db7.png" title=" actor enters 'test16386@gmail.com' into Field to enter email to register (completed)" width="929"/>
+                <img src="858260eccbc7fe6953a981290b792a4b13e8ab20e3e9fb9d05b96f5a1d7ba535.png" title=" actor enters 'Prueba16386*' into Field to enter password to register" width="929"/>
+                <img src="084c9cac80270ed0e0955065376ec9ddb3078ee64036a3326f7343c6d6f83756.png" title=" actor enters 'Prueba16386*' into Field to enter password to register (completed)" width="929"/>
+                <img src="0cbd9d0336e9e516b702cc665d79899895424460bc3d2a3f128a922fc75b620c.png" title=" actor enters 'Prueba16386*' into Field to enter confirm password to register" width="929"/>
+                <img src="c13a3ec6f14755672e24b6973ed011d00eaf6b2cb68d45fd0a703fdd9d0ef77a.png" title=" actor enters 'Prueba16386*' into Field to enter confirm password to register (completed)" width="929"/>
+                <img src="1ecd925a23a211a7e178d448c9cee846a74062ab9e1ed6fbb14192eafc4d0136.png" title=" actor clicks on Check to accept terms" width="929"/>
+                <img src="4412a601c47736c7b5bc384b20242f97818d65cb9c53bfb6745e7b7618413de5.png" title=" actor clicks on Check to accept terms (completed)" width="929"/>
+                <img src="4412a601c47736c7b5bc384b20242f97818d65cb9c53bfb6745e7b7618413de5.png" title=" actor clicks on Registration button" width="929"/>
+                <img src="6e6bf4867310664647730f960acd0544c56eeeccc8cc15d2d920ae33ddd4c520.png" title=" actor clicks on Registration button (completed)" width="929"/>
+                <img src="1ec389d0fc840560ae777c0d320f6112f10bae66bd6259b41325773855f5df29.png" title=" Actor wait" width="929"/>
+                <img src="48a27e06d6dcf32ca9ddf50cac3a0aa6b3a0d5018d908b2c7ffa3924fdd32957.png" title=" Actor wait (completed)" width="929"/>
+                <img src="605e0da730632b5fd5ca895f4bba2ed876514f5ab303133b92b3306118233569.png" title=" Actor create account (completed)" width="929"/>
+                <img src="605e0da730632b5fd5ca895f4bba2ed876514f5ab303133b92b3306118233569.png" title=" When he enters the required information
+| test16386 | test16386@gmail.com | Prueba16386* | Prueba16386* | (completed)" width="929"/>
+                <img src="605e0da730632b5fd5ca895f4bba2ed876514f5ab303133b92b3306118233569.png" title=" Then the customer can see the error message on screen User name already exists" width="929"/>
+                <img src="605e0da730632b5fd5ca895f4bba2ed876514f5ab303133b92b3306118233569.png" title=" Then validate error user exists should be a string containing 'User name already exists'" width="929"/>
+                <img src="6170faad7a654d5584b299a0a42403af1aa6c88698ac38caa30ffc06cff1cf20.png" title=" Then validate error user exists should be a string containing 'User name already exists' (completed): <span class='error-color'>ERROR</span>" width="929"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.5</span>
+</div>
+</body>
+</html>
